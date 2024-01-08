@@ -1,0 +1,131 @@
+html, body {margin: 0; padding: 0; background-color: rgba(225, 223, 219, .2);}
+body {opacity: 0; transition: opacity 2s;}
+
+
+h1,h2,h3,p {font-family: 'Work Sans', sans-serif;}
+h1 {font-weight: 400;}
+strong {font-weight: 700;}
+
+header {
+/*   background-color: pink;  */
+  position: absolute; 
+  margin: 10px;
+  z-index: 2;
+}
+
+main {width: 80vw; margin: auto; position: sticky;}
+footer {background: linear-gradient(0deg, lightblue, rgba(225, 0, 0, 0) 90%);}
+
+/******** HEADER ********/
+.banner-container {
+  border-bottom: solid;
+  border-color: black;
+  border-width: 1px;
+  height: 40px;
+  overflow: hidden;
+}
+
+#banner {
+  position: relative;
+  color: black;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: 400;
+  text-transform: lowercase;
+  opacity: 40%;
+}
+
+@keyframes banner {
+  from {transform: translateX(100%);}
+  to {transform: translateX(-100%);}
+}
+
+#statement {
+  text-align: left;
+  padding: 10px;
+  font-size: 3em;
+}
+
+#statement a {
+  color: lightblue;
+  font-style: oblique;
+}
+
+@media (max-width: 768px) {
+  #statement {
+    font-size: 1em;
+  }
+}
+
+/******** HEADER END ********/
+
+
+/******** MAIN START ********/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+/*   grid-template-columns: 1fr 1fr 1fr; */
+  gap: 3rem;
+}
+
+@media (max-width: 768px) { .grid-container {
+   grid-template-columns: 1fr;
+  }
+}
+
+.grid-container div {
+  text-align: center;
+  width: 100%;
+  transition: transform .3s ;
+  transition-timing-function: ease-in-out;
+}
+
+.grid-container img {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+.grid-container div:hover 
+  {
+  transform: scale(1.2);
+  }
+}
+
+#grid-heading-1 {
+  margin-top: 30vh;
+}
+
+.corner-btn {
+  font-size: 3em;
+  z-index: 1;
+  right: 10px;
+  bottom: 5px;
+  transition: font-size .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.corner-btn:hover {
+  font-size: 5em;
+}
+
+
+.bio {
+  width: 80vw; 
+  margin: auto; 
+  padding: 50px; 
+}
+
+#bio-text {
+  width: 75%;
+  color: black;
+  font-size: 15pt;
+  line-height: 1.3;
+}
+
+/* #bio-text a {color: #fffadb; font-style: oblique; text-decoration: none;}
+#bio-text a:hover {font-weight: 600;} */
+
+/* going to make this into an image pop up with mitzis face */
+#mitzi:hover {
+  display: inline-block;
+}

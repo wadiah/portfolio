@@ -1,0 +1,17 @@
+ <p>
+          <h3>Cool Websites To Visit </h3>
+            <table>
+              <th>Name</th>
+              <th>About</th> 
+                <tr>
+                  <td>I Don't Work</td>
+                  <td>A website made for the Japanese rapper, KOHH, and his music video "I Don't Work". Full of fun Easter Eggs and reminisces on the time gifs were first released.</td> 
+                </tr>
+                <tr>
+                  <td>GifCities.org</td>
+                  <td>An archive of historical gifs that were published on the world wide web.</td>
+                </tr>
+            </table>
+            
+       
+        </p>
