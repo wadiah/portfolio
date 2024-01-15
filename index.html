@@ -28,28 +28,43 @@
 </head>
  
 <body onload="document.body.style.opacity='1'">
-  <div class="banner-container"><h3 id="banner"></h3></div>
+  <div class="banner-container"><section class="banner">Currently looking for work! Find me on LinkedIn.</section></div>
     
 <header>
-  <div class="header-btn">
-    <a class="button" href="\">Home</a>
-    <a class="button">Contact</a>
-    <a class="button" href="https://docs.google.com/document/d/1RfBJNex0rY7xBHlqepxk_Q0rsc01sP9b11_Z_poLpPQ/edit?usp=sharing" target="_blank">CV</a>
-    </div>
- <div id="statement">
-    <h1>
-      <strong>Wadiah Mohammad</strong> is an interdisciplinary visual artist based in New York. She makes <a href="">video art</a>, <a href="">graphic designs</a>, <a href="">websites</a>, <a href="">animations</a> and <a href="\illustration.html">illustrations</a>.
-    </h1>
+
+
+  <div id="intro-text">
+      <h2 id="my-name"><a href="\">Wadiah Mohammad</h2></a>
+      <p>
+      is a digital designer + interdisciplinary artist + children's educator based in New York. <br>
+      She makes <a id="category" href="">video art</a>, <a id="category" href="">graphic designs</a>, <a id="category" href="">websites</a>, <a id="category" href="">animations</a> and <a id="category" href="\illustration.html">illustrations</a>.
+      </p>
   </div>
 
+  <div class="header-btn">
+    <button class="trigger">About</button>
+    <button class="trigger">Contact</button>
+    <button>Resources</button>
+  </div> 
+
+  <div class="modal">
+      <span class="btn-close">&times;</span>
+        <p>test</p>
+  </div>
+
+  <div class="modal">
+    <span class="btn-close">&times;</span>
+    <p>
+      <h3>🌺💌🌺</h3>
+      Email: wadiah.studio (at) gmail dot com
+      <br><a href="https://www.linkedin.com/in/wadiah-m/" target="_blank">LinkedIn</a> / <a href="https://www.instagram.com/wadiah.makes/" target="_blank">Instagram</a> / <a href="https://github.com/wadiah" target="_blank">GitHub</a>
+    </p>
+</div>
 
 </header>
     
 <main>
-  <div>
-  <h3>Featured Work</h3>
-  </div>
-
+  <div class="grid-title">Selected Works</div>
   <div class="grid-container" id="illustration-grid">
     <!-- 2020 -->
     <div><img src="\img-illustration\20_1.gif"></div>
@@ -57,11 +72,6 @@
    
   </div>
 </main>
-  
-  
-<footer>
-    
-    </footer>
 
-   </body>
+</body>
 </html>
