@@ -1,26 +1,30 @@
-// let link = document.createElement("a");
-// let text = document.createTextNode("Currently looking for work! Find me on ");
+const introText = document.getElementById('intro-abt');
+
+const dialog = document.getElementById('dialog');
+const jsbutton = document.getElementById('jsbutton');
+const modal = document.getElementById('modal');
+
+const dialogTwo = document.getElementById('dialog-two');
+const jsbuttonTwo = document.getElementById('jsbutton-two');
+const modalTwo = document.getElementById('modal-two');
+
+introText.textContent += 'is an interdisciplinary artist + educator based in New York.';
 
 
-// link.appendChild(text);
-// link.title = "LinkedIn";
-// link.href = "https://linkedin.com";
-// let el = document.getElementById("banner");
-// el.appendChild(link);
+modal.addEventListener('click', (event) => {
+    dialog.showModal();
+  });
 
-// let result = text.repeat(1);
+  jsbutton.addEventListener('click', (event) => {
+    dialog.close();
+    text.innerHTML += '"JS close" closed the dialog.<br/>';
+  });
 
+  modalTwo.addEventListener('click', (event) => {
+    dialogTwo.showModal();
+  });
 
-// document.getElementById("banner").innerHTML = result;
-// document.getElementById("banner").animate(
-//   [
-//     // keyframes
-//     { transform: "translateX(100%)" },
-//     { transform: "translateX(-100%)" },
-//   ],
-//   {
-//     // timing options
-//     duration: 30000,
-//     iterations: Infinity,
-//   }
-// );
+  jsbuttonTwo.addEventListener('click', (event) => {
+    dialogTwo.close();
+    text.innerHTML += '"JS close" closed the dialog.<br/>';
+  });

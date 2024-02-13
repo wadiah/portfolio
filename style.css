@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-html, body {margin: 0; padding: 0; background-color: rgba(225, 223, 219, .2);}
+html, body {height: 100%; width: 100%; margin: 0; padding: 0; background-color: rgba(225, 223, 219, .2);}
 body {opacity: 0; transition: opacity 2s; overflow-x: hidden;}
-
-
-p,a {font-family: 'Work Sans', sans-serif;}
-h1 {font-weight: 400;}
-strong {font-weight: 600;}
 header {margin: 0 auto; width: 80vw;}
 main {width: 80vw; margin: auto; padding-top: 20pt;}
+
+h1 {font-weight: 400;}
+strong {font-weight: 600;}
 
 /******** HEADER ********/
 .banner-container {
@@ -46,37 +44,53 @@ main {width: 80vw; margin: auto; padding-top: 20pt;}
   }
 }
 
-#intro-text {
-  padding-top: 10vh;
+.intro {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22pt;
   text-align: left;
-  font-size: 20pt;
-}
-
-#my-name, #my-name a:link {
-  line-height: 0;
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  color:  palevioletred;
-  text-decoration: none;
-}
-
-#my-name a:hover {
-  font-weight: 400;
-}
-
-#my-name a:visited {
-  color: palevioletred;
+  margin-top: 5em;
 }
 
 @media (max-width: 768px) {
-  #intro-text {
-    font-size: 18pt;
+  .intro {
+    font-size: 15pt;
   }
 }
 
+#myname a:link {
+  font-family: 'Space Mono', monospace;
+  font-size: 60pt;
+  font-weight: 700;
+  line-height: 1em;
+  color:  rgb(228, 117, 213);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  #myname a:link {
+    font-size: 30pt;
+  }
+}
+
+#myname a:visited {
+  color: rgb(228, 117, 213);
+  text-decoration: none;
+}
+
+#intro-abt {
+  margin-top: .5em;
+  line-height: 1.3;
+}
+
+#intro-cat {
+  margin-top: 0;
+}
+
 #category {
-  color: rgb(80, 161, 167);
-  background-color: rgba(152, 251, 152, 0.363);
+  color: rgb(119, 117, 228);
+  background-color: rgba(202, 253, 255, 0.623);
   font-weight: 500;
   text-decoration: none;
   transition: background-color .3s ;
@@ -84,65 +98,7 @@ main {width: 80vw; margin: auto; padding-top: 20pt;}
 }
 
 #category:hover {
-  background-color: yellow;
-}
-
-.header-btn {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.header-btn a:link, a:visited, button {
-  font-family: 'Space Mono', monospace;
-  font-weight: 400; 
-  font-size: 14pt;
-  color: black;
-  border: none;
-  text-decoration: none;
-  transition: background-color .3s ;
-  transition-timing-function: ease-in-out;
-}
-
-.header-btn a:hover, button:hover {background-color: yellow; cursor: pointer;}
-
-
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    align-self: center;
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 24rem;
-    border-radius: 0.5rem;
-}
-
-.btn-close {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightgray;
-}
-
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1.0);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  background-color: #fffab4;
 }
 
 /******** HEADER END ********/
@@ -150,12 +106,13 @@ main {width: 80vw; margin: auto; padding-top: 20pt;}
 
 /******** MAIN START ********/
 .grid-title {
+  margin-top: 5em;
+  margin-bottom: 2em;
   padding: 15px;
   text-align: center;
-  font-size: 10pt;
+  font-size: 15pt;
   font-family: 'Space Mono', monospace;
   font-weight: 400;
-  /* background: linear-gradient(90deg, rgba(255,255,255,0) 0%, pink 50%,  rgba(255,255,255,0) 100%); */
   color: black;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
@@ -164,8 +121,7 @@ main {width: 80vw; margin: auto; padding-top: 20pt;}
 .grid-container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-/*   grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
 }
 
@@ -184,3 +140,39 @@ main {width: 80vw; margin: auto; padding-top: 20pt;}
 .grid-container img {
   width: 100%;
 }
+/******** MAIN END ********/
+
+/******** FOOTER START ********/
+.intro-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+}
+
+.intro-btn button {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400; 
+  font-size: 15pt;
+  color: black;
+  border: none;
+  text-decoration: none;
+  background-color: white;
+  margin-left: 10px;
+
+  padding: 5px;
+  transition: background-color .2s ;
+  transition-timing-function: ease-in-out;
+}
+
+.intro-btn button:hover {background-color: rgb(255, 207, 74); cursor: pointer;}
+
+.intro-btn button:modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/******** FOOTER END ********/
